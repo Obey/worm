@@ -341,12 +341,12 @@ $scope.Length = function() {
     $scope.mesh.material = $scope.meshmat;
     $scope.mesh.actionManager = new BABYLON.ActionManager($scope.scene);
 
-    $scope.mesh.actionManager.registerAction(
+  /*  $scope.mesh.actionManager.registerAction(
          new BABYLON.ExecuteCodeAction(
              BABYLON.ActionManager.OnPickTrigger,
              function () {doDownload('scene', $scope.scene);}
          )
-    );
+    ); */
 
 
     $scope.meshmat.bumpTexture.uScale = $scope.meshmat.diffuseTexture.uScale = 12;
