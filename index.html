@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
-    <title>Babylon.js - Multi views demo</title>
+    <title>WORMME</title>
 
 
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -177,7 +177,7 @@
 
     app.controller('myCtrl', function($scope) {
     $scope.Metalframe = true;
-    $scope.texturl = "/images/sandtexture.jpg";
+    $scope.texturl = "https://shop.zabor-ss.ru/images/sandtexture.jpg";
       var canvas = document.getElementById("renderCanvas");
 
       var engine = null;
@@ -203,7 +203,7 @@
   var mat = new BABYLON.StandardMaterial("mat1", $scope.scene);
   mat.alpha = 1;
 
-  var EnvironmentTexture = BABYLON.CubeTexture.CreateFromPrefilteredData("/textures/environment.dds", $scope.scene);
+  var EnvironmentTexture = BABYLON.CubeTexture.CreateFromPrefilteredData("https://shop.zabor-ss.ru/textures/environment.dds", $scope.scene);
   // Металл
     $scope.Metal_material = new BABYLON.PBRMetallicRoughnessMaterial("pbr", $scope.scene);
     $scope.Metal_material.metallic = 1;
