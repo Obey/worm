@@ -164,19 +164,28 @@
 <div style="bottom: 5%; z-index: 5000;" class="fb-like" data-colorscheme="dark" data-href="https://obey.github.io/worm/" data-width="" data-layout="standard" data-action="like" data-size="small" data-share="true"></div>
 
 	    
-<div  id="upr" class="">
+<div  id="upr" class="p-1 text-center">
 <input type="range" min="0" max="1" step ="0.05" ng-model="Metal_material.roughness">
 <input  ng-change="Wire();" type="range" step ="1" ng-model="length">	
 <input  ng-change="Wire();" type="range" step ="1" ng-model="kk">	
 	
 
 
-<div ng-show="sceneColor != '#FFFFFFFF'" ng-click="sceneColor = '#FFFFFFFF'" class="btn btn-sm btn-secondary">{{sceneColor}}</div>
-<div ng-show="sceneColor != '#000000FF'" ng-click="sceneColor = '#000000FF'" class="btn btn-sm btn-white">{{sceneColor}}</div>
-<div ng-show="matColor != '#000000FF'"  ng-click="matColor = '#000000FF'" class="btn btn-sm btn-white">matColor = '#000000FF'</div>
-<div ng-show="matColor != '#FFFFFFFF'"  ng-click="matColor = '#FFFFFFFF'" class="btn btn-sm btn-white">matColor = '#000000FF'</div>
+
+	
+<div class="form-check form-switch">
+  <input ng-model="sc" class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+  <label class="form-check-label" for="flexSwitchCheckDefault">{{sceneColor}}</label>
+</div>	
+<div ng-if="sc" class="hidden">{{sceneColor = '#FFFFFFFF'}}</div>
+<div ng-if="!sc" class="hidden">{{sceneColor = '#000000FF'}}</div>	
+	
+<div ng-show="matColor != '#000000FF'"  ng-click="matColor = '#000000FF'" class="btn btn-sm btn-info">matColor = '#000000FF'</div>
+<div ng-show="matColor != '#FFFFFFFF'"  ng-click="matColor = '#FFFFFFFF'" class="btn btn-sm btn-info">matColor = '#000000FF'</div>
 
 <!--
+<div ng-show="sceneColor != '#FFFFFFFF'" ng-click="sceneColor = '#FFFFFFFF'" class="btn btn-sm btn-secondary">{{sceneColor}}</div>
+<div ng-show="sceneColor != '#000000FF'" ng-click="sceneColor = '#000000FF'" class="btn btn-sm btn-secondary">{{sceneColor}}</div>
 <input style="bottom: 5%; z-index: 5000;" ng-change=" Wire();" type="number" step ="1" ng-model="wire">
 <input ng-change="" type="number" step ="1" ng-model="kgk">
 <div ng-click="Metalframe = !Metalframe" class="btn btn-sm btn-white">{{Metalframe}}</div>
