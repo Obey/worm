@@ -167,22 +167,20 @@
 <div  id="upr" class="p-1 text-center">
 <input type="range" min="0" max="1" step ="0.05" ng-model="Metal_material.roughness">
 <input  ng-change="Wire();" type="range" min="1" step ="1" ng-model="length">	
-<input  ng-change="Wire();" type="range" step ="0.00001" ng-model="kk">	
-	
-
-
 
 	
 <div ng-init="sc = true" class="form-check form-switch">
   <input ng-change="WB(sc);" ng-model="sc" class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
-  <label class="form-check-label" for="flexSwitchCheckDefault">{{sceneColor}}</label>
+  <label class="form-check-label" for="flexSwitchCheckDefault"></label>
 </div>	
 
 	
-<div ng-show="matColor != '#000000FF'"  ng-click="matColor = '#000000FF'" class="btn btn-sm btn-info">{{matColor}}</div>
-<div ng-show="matColor != '#FFFFFFFF'"  ng-click="matColor = '#FFFFFFFF'" class="btn btn-sm btn-info">{{matColor}}</div>
+
 
 <!--
+<div ng-show="matColor != '#000000FF'"  ng-click="matColor = '#000000FF'" class="btn btn-sm btn-info">{{matColor}}</div>
+<div ng-show="matColor != '#FFFFFFFF'"  ng-click="matColor = '#FFFFFFFF'" class="btn btn-sm btn-info">{{matColor}}</div>
+<input  ng-change="Wire();" type="range" step ="0.00001" ng-model="kk">	
 <div ng-show="sceneColor != '#FFFFFFFF'" ng-click="sceneColor = '#FFFFFFFF'" class="btn btn-sm btn-secondary">{{sceneColor}}</div>
 <div ng-show="sceneColor != '#000000FF'" ng-click="sceneColor = '#000000FF'" class="btn btn-sm btn-secondary">{{sceneColor}}</div>
 <input style="bottom: 5%; z-index: 5000;" ng-change=" Wire();" type="number" step ="1" ng-model="wire">
