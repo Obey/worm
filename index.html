@@ -264,8 +264,8 @@
   mat.wireframe = $scope.Metalframe;
 
 $scope.WB = function(sc) {	      
-if (sc) $scope.sceneColor = '#000000FF';
-else $scope.sceneColor = '#FFFFFFFF'; 	
+if (sc) { $scope.sceneColor = '#000000FF'; $scope.matColor = '#FFFFFFFF'; }
+else { $scope.sceneColor = '#FFFFFFFF'; $scope.matColor = '#000000FF'; }	
 }
 
 $scope.Length = function() {
