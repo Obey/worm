@@ -175,10 +175,9 @@
 	
 <div ng-init="sc = true" class="form-check form-switch">
   <input ng-change="WB(sc);" ng-model="sc" class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
-  <label class="form-check-label" for="flexSwitchCheckDefault">{{sc}}: {{sceneColor}}</label>
+  <label class="form-check-label" for="flexSwitchCheckDefault">{{sceneColor}}</label>
 </div>	
-<div ng-if="sc" class="hidden">{{sceneColor = '#FFFFFFFF';}}</div>
-<div ng-if="!sc" class="hidden">{{sceneColor = '#000000FF';}}</div>	
+
 	
 <div ng-show="matColor != '#000000FF'"  ng-click="matColor = '#000000FF'" class="btn btn-sm btn-info">{{matColor}}</div>
 <div ng-show="matColor != '#FFFFFFFF'"  ng-click="matColor = '#FFFFFFFF'" class="btn btn-sm btn-info">{{matColor}}</div>
