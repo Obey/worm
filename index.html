@@ -218,7 +218,7 @@
 
     app.controller('myCtrl', function($scope) {
     $scope.Metalframe = true;
-    $scope.texturl = "https://shop.zabor-ss.ru/images/sandtexture.jpg";
+  //  $scope.texturl = "https://shop.zabor-ss.ru/images/sandtexture.jpg";
       var canvas = document.getElementById("renderCanvas");
 
       var engine = null;
@@ -244,7 +244,7 @@
   var mat = new BABYLON.StandardMaterial("mat1", $scope.scene);
   mat.alpha = 1;
 
-  var EnvironmentTexture = BABYLON.CubeTexture.CreateFromPrefilteredData("https://shop.zabor-ss.ru/textures/environment.dds", $scope.scene);
+  var EnvironmentTexture = BABYLON.CubeTexture.CreateFromPrefilteredData("environment.dds", $scope.scene);
   // Металл
     $scope.Metal_material = new BABYLON.PBRMetallicRoughnessMaterial("pbr", $scope.scene);
     $scope.Metal_material.metallic = 1;
